@@ -82,7 +82,7 @@ async def videos_handler(bot: Client, m: Message):
         return
     input_ = f"{Config.DOWN_PATH}/{m.from_user.id}/input.txt"
     if os.path.exists(input_):
-        await m.reply_text("Sorry Dear,\nAlready One in Progress!\nDon't Spam Plox.\n@TheTeleRoid")
+        await m.reply_text("Sorry Dear,\nAlready One in Progress!\nDon't Spam Plox.\n@Tamil_Rulzz")
         return
     isInGap, sleepTime = await CheckTimeGap(m.from_user.id)
     if isInGap is True:
@@ -112,7 +112,7 @@ async def videos_handler(bot: Client, m: Message):
         elif len(QueueDB.get(m.from_user.id)) > Config.MAX_VIDEOS:
             markup = await MakeButtons(bot, m, QueueDB)
             await editable.edit(
-                text=f"Sorry Dear,\nMax {str(Config.MAX_VIDEOS)} Videos Allowed to Merge Together!\nPress **Merge Now** Button Now!\n\n@TheTeleRoid",
+                text=f"Sorry Dear,\nMax {str(Config.MAX_VIDEOS)} Videos Allowed to Merge Together!\nPress **Merge Now** Button Now!\n\n@Tamil_Rulzz",
                 reply_markup=InlineKeyboardMarkup(markup)
             )
 
@@ -249,7 +249,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 return
         vid_list = list(set(vid_list))
         if (len(vid_list) < 2) and (len(vid_list) > 0):
-            await cb.message.edit("There only One Video in Queue!\nMaybe you sent same video multiple times.\n\n@TheTeleRoid")
+            await cb.message.edit("There only One Video in Queue!\nMaybe you sent same video multiple times.\n\n@Tamil_Rulzz")
             return
         await cb.message.edit("Trying to Merge Videos ...")
         with open(input_, 'w') as _list:
@@ -514,7 +514,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 await cb.message.edit("Failed to get Screenshots!")
                 await asyncio.sleep(Config.TIME_GAP)
             else:
-                await cb.message.edit("Generated Screenshots Successfully!\nNow Uploading to TG\n@TheTeleRoid...")
+                await cb.message.edit("Generated Screenshots Successfully!\nNow Uploading to TG\n@Tamil_Rulzz...")
                 photo_album = list()
                 if list_images is not None:
                     i = 0
@@ -545,7 +545,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 await cb.message.edit("Failed to Generate Sample Video!")
                 await asyncio.sleep(Config.TIME_GAP)
             else:
-                await cb.message.edit("Successfully Generated Sample Video!\nNow Uploading to TG\n@TheTeleRoid...")
+                await cb.message.edit("Successfully Generated Sample Video!\nNow Uploading to TG\n@Tamil_Rulzz...")
                 sam_vid_duration = 5
                 sam_vid_width = 100
                 sam_vid_height = 100
