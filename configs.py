@@ -23,9 +23,9 @@ class Config(object):
 Hello! Duffer, This is a Video Merger Bot!
 This Bot can Merge Multiple Videos in One Video AnD Video Formats should be same. 
 
-Made by @TheTeleRoid
+Made by @Tamil_Rulzz
 """
-    CAPTION = "Video Merged by @{}\n\nMade by\n\n@TheTeleRoid"
+    CAPTION = "Video Merged by @{}\n\nMade by\n\n@Tamil_Rulzz"
     PROGRESS = """
 🛠Percentage : {0}%
 ✅Done: {1}
