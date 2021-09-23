@@ -30,9 +30,9 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("Developer - @PredatorHackerzZ", url="https://t.me/TheTeleRoid")],
-                        [InlineKeyboardButton("⭕ Support ⭕", url="https://t.me/TeleRoid14"),
-                         InlineKeyboardButton("⭕ Channel ⭕", url="https://t.me/TeleRoidGroup")]
+                        [InlineKeyboardButton("⭕ Support/Help ⭕", url="https://t.me/joinchat/UfE0nWA8g5loj3DS")],
+                        [InlineKeyboardButton("⭕ Movies ⭕", url="https://t.me/Tamil_Rulzz"),
+                         InlineKeyboardButton("⭕ Webseries ⭕", url="https://t.me/Tamilshowss")]
                     ]
                 )
             )
@@ -51,9 +51,9 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("Developer - @PredatorHackerzZ", url="https://t.me/TheTeleRoid")],
-                        [InlineKeyboardButton("⭕ Support ⭕", url="https://t.me/TeleRoid14"),
-                         InlineKeyboardButton("⭕ Channel ⭕", url="https://t.me/TeleRoidGroup")]
+                        [InlineKeyboardButton("⭕ Support/Help ⭕", url="https://t.me/joinchat/UfE0nWA8g5loj3DS")],
+                        [InlineKeyboardButton("⭕ Movies ⭕", url="https://t.me/Tamil_Rulzz"),
+                         InlineKeyboardButton("⭕ Webseries ⭕", url="https://t.me/Tamilshowss")]
                     ]
                 )
             )
