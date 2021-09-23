@@ -431,7 +431,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 ask_: Message = await bot.listen(cb.message.chat.id, timeout=300)
                 if ask_.text:
                     ascii_ = e = ''.join([i if (i in string.digits or i in string.ascii_letters or i == " ") else "" for i in ask_.text])
-                    new_file_name = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/{ascii_.replace(' ', '_').rsplit('.', 1)[0]}.{FormtDB.get(cb.from_user.id).lower()}"
+                    new_file_name = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/{ascii_.replace(' ', '_').rsplit('.', 1)[0]}@Tamil_Rulzz.{FormtDB.get(cb.from_user.id).lower()}"
                     await cb.message.edit(f"Renaming File Name to `{new_file_name.rsplit('/', 1)[-1]}`")
                     os.rename(merged_vid_path, new_file_name)
                     await asyncio.sleep(2)
