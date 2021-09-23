@@ -20,7 +20,7 @@ class Config(object):
     BOT_OWNER = int(os.environ.get("BOT_OWNER", 1445283714))
 
     START_TEXT = """
-Hello! Duffer, This is a Video Merger Bot!
+Hello! Dude!!, This is a Video Merger Bot!
 This Bot can Merge Multiple Videos in One Video AnD Video Formats should be same. 
 
 Made by @Tamil_Rulzz
