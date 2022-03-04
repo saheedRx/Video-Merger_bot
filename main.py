@@ -81,7 +81,7 @@ async def videos_handler(bot: Client, m: Message):
         return
     input_ = f"{Config.DOWN_PATH}/{m.from_user.id}/input.txt"
     if os.path.exists(input_):
-        await m.reply_text("Sorry Dear,\nAlready One in Progress!\nDon't Spam Plox.\n@Tamil_Rulzz")
+        await m.reply_text("Sorry Dear,\nAlready One in Progress!\nDon't Spam Plox.\n@Tamil_Kingdom")
         return
     isInGap, sleepTime = await CheckTimeGap(m.from_user.id)
     if isInGap is True:
@@ -248,7 +248,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 return
         vid_list = list(set(vid_list))
         if (len(vid_list) < 2) and (len(vid_list) > 0):
-            await cb.message.edit("There only One Video in Queue!\nMaybe you sent same video multiple times.\n\n@Tamil_Rulzz")
+            await cb.message.edit("There only One Video in Queue!\nMaybe you sent same video multiple times.\n\n@Tamil_Kingdom")
             return
         await cb.message.edit("Trying to Merge Videos ...")
         with open(input_, 'w') as _list:
