@@ -30,9 +30,8 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("⭕ Support/Help ⭕", url="https://t.me/joinchat/UfE0nWA8g5loj3DS")],
-                        [InlineKeyboardButton("⭕ Movies ⭕", url="https://t.me/Tamil_Rulzz"),
-                         InlineKeyboardButton("⭕ Webseries ⭕", url="https://t.me/Tamilshowss")]
+                        [InlineKeyboardButton("⭕ Movies ⭕", url="https://t.me/Tamil_Kingdom"),
+                         InlineKeyboardButton("⭕ Webseries ⭕", url="https://t.me/Tami_Kingdom")]
                     ]
                 )
             )
@@ -51,9 +50,8 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("⭕ Support/Help ⭕", url="https://t.me/joinchat/UfE0nWA8g5loj3DS")],
-                        [InlineKeyboardButton("⭕ Movies ⭕", url="https://t.me/Tamil_Rulzz"),
-                         InlineKeyboardButton("⭕ Webseries ⭕", url="https://t.me/Tamilshowss")]
+                        [InlineKeyboardButton("⭕ Movies ⭕", url="https://t.me/Tamil_Kingdom"),
+                         InlineKeyboardButton("⭕ Webseries ⭕", url="https://t.me/Tamil_Kingdom")]
                     ]
                 )
             )
