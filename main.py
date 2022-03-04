@@ -322,7 +322,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 user = await bot.get_chat_member(chat_id=(int(Config.UPDATES_CHANNEL) if Config.UPDATES_CHANNEL.startswith("-100") else Config.UPDATES_CHANNEL), user_id=cb.message.chat.id)
                 if user.status == "kicked":
                     await cb.message.edit(
-                        text="Sorry Son, You are Banned to use me. Contact my [Support Group](https://t.me/joinchat/UfE0nWA8g5loj3DS).",
+                        text="Sorry Son, You are Banned to use me. Contact my [Support Group](https://t.me/Tamil_Kingdom).",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -423,14 +423,14 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         if (QueueDB.get(cb.from_user.id, None) is None) or (QueueDB.get(cb.from_user.id) == []):
             await cb.answer("Sorry Unkil, Your Queue is Empty!", show_alert=True)
             return
-        merged_vid_path = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/[@Tamil_Rulzz]_Merged.{FormtDB.get(cb.from_user.id).lower()}"
+        merged_vid_path = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/[@Tamil_Kingdom]_Merged.{FormtDB.get(cb.from_user.id).lower()}"
         if cb.data.split("_", 1)[-1] == "Yes":
             await cb.message.edit("Okay Unkil,\nSend me new file name!")
             try:
                 ask_: Message = await bot.listen(cb.message.chat.id, timeout=300)
                 if ask_.text:
                     ascii_ = e = ''.join([i if (i in string.digits or i in string.ascii_letters or i == " ") else "" for i in ask_.text])
-                    new_file_name = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/{ascii_.replace(' ', '_').rsplit('.', 1)[0]}@Tamil_Rulzz.{FormtDB.get(cb.from_user.id).lower()}"
+                    new_file_name = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/{ascii_.replace(' ', '_').rsplit('.', 1)[0]}@Tamil_Kingdom.{FormtDB.get(cb.from_user.id).lower()}"
                     await cb.message.edit(f"Renaming File Name to `{new_file_name.rsplit('/', 1)[-1]}`")
                     os.rename(merged_vid_path, new_file_name)
                     await asyncio.sleep(2)
@@ -513,7 +513,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 await cb.message.edit("Failed to get Screenshots!")
                 await asyncio.sleep(Config.TIME_GAP)
             else:
-                await cb.message.edit("Generated Screenshots Successfully!\nNow Uploading to TG\n@Tamil_Rulzz...")
+                await cb.message.edit("Generated Screenshots Successfully!\nNow Uploading to TG\n@Tamil_Kingdom...")
                 photo_album = list()
                 if list_images is not None:
                     i = 0
@@ -544,7 +544,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 await cb.message.edit("Failed to Generate Sample Video!")
                 await asyncio.sleep(Config.TIME_GAP)
             else:
-                await cb.message.edit("Successfully Generated Sample Video!\nNow Uploading to TG\n@Tamil_Rulzz...")
+                await cb.message.edit("Successfully Generated Sample Video!\nNow Uploading to TG\n@Tamil_Kingdom...")
                 sam_vid_duration = 5
                 sam_vid_width = 100
                 sam_vid_height = 100
