@@ -56,9 +56,8 @@ async def start_handler(bot: Client, m: Message):
         quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("⭕ Support/Help ⭕", url="https://t.me/joinchat/UfE0nWA8g5loj3DS")],
-                [InlineKeyboardButton("⭕ Movies ⭕", url="https://t.me/Tamil_Rulzz"),
-                 InlineKeyboardButton("⭕ Webseries ⭕", url="https://t.me/Tamilshowss")],
+                [InlineKeyboardButton("⭕ Movies ⭕", url="https://t.me/Tamil_Kingdom")],
+                [InlineKeyboardButton("⭕ Webseries ⭕", url="https://t.me/Tamil_Kingdom")],
                 [InlineKeyboardButton("Open Settings", callback_data="openSettings")]
             ]
         )
@@ -330,11 +329,11 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                     return
             except UserNotParticipant:
                 await cb.message.edit(
-                    text="**You Still Didn't Join ☹️, Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
+                    text="**You Still Didn't Join ☹️, Please Join My Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                                InlineKeyboardButton("🤖 Join Channel", url=invite_link.invite_link)
                             ],
                             [
                                 InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshFsub")
@@ -346,7 +345,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 return
             except Exception:
                 await cb.message.edit(
-                    text="Something went Wrong. Contact my [Support Group](https://t.me/joinchat/UfE0nWA8g5loj3DS).",
+                    text="Something went Wrong. Contact my [Support Group](https://t.me/tamil_kingdom).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -354,7 +353,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         await cb.message.edit(
             text=Config.START_TEXT,
             parse_mode="Markdown",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⭕ Support/Help ⭕", url="https://t.me/joinchat/UfE0nWA8g5loj3DS"), InlineKeyboardButton("⭕ Movies ⭕", url="https://t.me/Tamil_Rulzz")], [InlineKeyboardButton("⭕ Webseries ⭕", url="https://t.me/Tamilshowss")]]),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⭕ Support/Help ⭕", url="https://t.me/Tamil_Kingdom"), InlineKeyboardButton("⭕ Movies ⭕", url="https://t.me/Tamil_Kingdom")], [InlineKeyboardButton("⭕ Webseries ⭕", url="https://t.me/Tamil_Kingdom")]]),
             disable_web_page_preview=True
         )
     elif "showThumbnail" in cb.data:
